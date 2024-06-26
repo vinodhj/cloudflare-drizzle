@@ -1,6 +1,11 @@
 import { users } from '../db/schema';
 import { dbConnection } from './db-connection';
 import { customAlphabet, nanoid } from 'nanoid';
+<<<<<<< Updated upstream
+=======
+import { handleDizzleInsert } from './handle-dizzle-insert';
+import { handleDizzleRead } from './handle-dizzle-read';
+>>>>>>> Stashed changes
 
 export interface Env {
   TURSO_URL: string;
@@ -18,6 +23,7 @@ export default {
   async fetch(request, env, ctx): Promise<Response> {
     const url = new URL(request.url);
     const path = url.pathname;
+<<<<<<< Updated upstream
 
     if (path === '/dizzle-test' && request.method === 'GET') {
       const db = dbConnection(env.TURSO_URL, env.TURSO_AUTH_TOKEN);
@@ -31,6 +37,15 @@ export default {
       const response = await db.insert(users).values(insert_values).returning().get();
       const result = new Response(JSON.stringify({ msg: 'Inserted successfully', response }), { status: 200 });
       return addCorsHeaders(result);
+=======
+    const db = dbConnection(env.TURSO_URL, env.TURSO_AUTH_TOKEN);
+    if (path === '/dizzle-insert' && request.method === 'GET') {
+      return await handleDizzleInsert(db);
+>>>>>>> Stashed changes
+    }
+
+    if (path === '/dizzle-read' && request.method === 'GET') {
+      return await handleDizzleRead(db);
     }
 
     // Return 404
