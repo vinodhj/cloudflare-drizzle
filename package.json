@@ -5,6 +5,7 @@
   "scripts": {
     "deploy": "wrangler deploy",
     "dev": "wrangler dev --port 3001",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\" --no-error-on-unmatched-pattern",
     "start": "wrangler dev",
     "test": "vitest",
     "cf-typegen": "wrangler types",
@@ -24,6 +25,7 @@
     "@libsql/client": "^0.7.0",
     "dotenv": "^16.4.5",
     "drizzle-orm": "^0.31.2",
-    "nanoid": "^5.0.7"
+    "nanoid": "^5.0.7",
+    "prettier": "^3.3.2"
   }
 }

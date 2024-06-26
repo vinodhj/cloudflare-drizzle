@@ -2,6 +2,6 @@
 // by running `wrangler types`
 
 interface Env {
-	DB_URL: string;
-	DB_TOKEN: string;
+  DB_URL: string;
+  DB_TOKEN: string;
 }

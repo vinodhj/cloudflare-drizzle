@@ -20,3 +20,4 @@ This project leverages Cloudflare Workers to deploy serverless functions at the 
    ```bash
    git clone https://github.com/vinodhj/cloudflare-project.git
    cd cloudflare-project
+   ```
