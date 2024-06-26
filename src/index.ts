@@ -1,4 +1,4 @@
-import { users } from '../schema';
+import { users } from '../db/schema';
 import { dbConnection } from './db-connection';
 import { customAlphabet, nanoid } from 'nanoid';
 
