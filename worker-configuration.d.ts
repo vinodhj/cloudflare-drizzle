@@ -2,6 +2,6 @@
 // by running `wrangler types`
 
 interface Env {
-  DB_URL: string;
-  DB_TOKEN: string;
+  TURSO_URL: string;
+  TURSO_AUTH_TOKEN: string;
 }
