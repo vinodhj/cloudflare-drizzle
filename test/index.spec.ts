@@ -41,6 +41,8 @@ describe('Hello World worker', () => {
       id: expect.any(Number),
       fullName: expect.any(String),
       phone: expect.any(String),
+      created_at: expect.any(String),
+      updated_at: expect.any(String),
     });
   });
 
@@ -61,6 +63,8 @@ describe('Hello World worker', () => {
     expect(result.response[0]).toMatchObject({
       fullName: expect.any(String),
       phone: expect.any(String),
+      created_at: expect.any(String),
+      updated_at: expect.any(String),
     });
   });
 });
